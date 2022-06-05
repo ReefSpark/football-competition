@@ -1,0 +1,55 @@
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #090e0c;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+
+
+.formlist_logoimg{
+	border:1px solid rgb(134, 132, 132);
+	background:#fff;
+	width:70px;
+	height:70px;
+	border-radius:100%;
+  margin: 34px 0px 0px 116px;
+}
+
+img{
+  border-radius: 50%;
+}
+
+.list{
+  border:1px solid rgb(189, 186, 186);
+  margin-left: 70px;
+  margin-top: 20px;
+  height:140px;
+  cursor:pointer;
+}
+

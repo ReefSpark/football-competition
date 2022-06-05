@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div class="row m0">
+    <h3 style="text-align: center;">COMPETITIONS LIST </h3>
+      <div class="col-md-3 list" *ngFor="let item of competitionList" (click)="getCompetitionId(item)">
+        <div class="col-md-12 pos-middle pr0">
+          <span style="padding-left: 92px;">{{item.name}}</span>
+          <div class="formlist_logoimg">
+            <img  [src]="item.image" style="height: 102%;width:100%;">
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

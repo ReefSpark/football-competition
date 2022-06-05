@@ -1,0 +1,20 @@
+.formlist_logoimg{
+	border:1px solid rgb(134, 132, 132);
+	background:#fff;
+	width:70px;
+	height:70px;
+	border-radius:100%;
+  margin: 34px 0px 0px 116px;
+}
+
+img{
+  border-radius: 50%;
+}
+
+.list{
+  border:1px solid rgb(189, 186, 186);
+  margin-left: 70px;
+  margin-top: 20px;
+  height:140px;
+  cursor:pointer;
+}

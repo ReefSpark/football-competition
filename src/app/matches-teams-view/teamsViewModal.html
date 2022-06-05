@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>
+  <mat-tab-group (selectedTabChange)="setActiveTab($event.index)" [(selectedIndex)]="tabIndex" mat-align-tabs="center">
+    <mat-tab   *ngFor="let tab of tablist;index as i">
+     <ng-template mat-tab-label>
+          {{tab.value}}
+     </ng-template>
+   </mat-tab>
+ </mat-tab-group>
+</h2>
+
+<div mat-dialog-content style="padding-top: 20px;border-bottom: 2px solid rgb(243, 243, 243);
+padding-bottom: 20px;min-width: 600px">
+    <div class="row" *ngIf="active_tab.id=='basic'">
+      <div class="col-md-4">
+        <img  [src]="data.team.image" style="height: 92%;width: 64%;">
+      </div>
+      <div class="col-md-6">
+        <span style="font-size: 30px;font-weight: bold;">{{data.team.teamName}}</span>
+      </div>
+    </div>
+    <div class="col-md-12" *ngIf="active_tab.id=='player_list'">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sno</th>
+            <th scope="col">Name</th>
+            <th scope="col">Position</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Country of Birth</th>
+            <th scope="col">Nationality</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of memberList;index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.position}}</td>
+            <td>{{item.dateOfBirth}}</td>
+            <td>{{item.countryOfBirth}}</td>
+            <td>{{item.nationality}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<div mat-dialog-actions align="end">
+	<button mat-button mat-raised-button mat-dialog-close>Close</button>
+</div>

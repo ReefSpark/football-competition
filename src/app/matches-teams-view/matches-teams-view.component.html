@@ -1,0 +1,40 @@
+<!-- <div class="container">
+  <div class="row">
+    <h2>Matches Competition</h2>
+  </div>
+
+  <div class="row" style="padding-top: 20px;">
+    <div class="col-md-12">
+        <h2>Teams Competition</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Sno</th>
+              <th scope="col">Teams</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of teamLists;index as i" style="color: #1f67a6;" (click)="viewTeamMembers(item)" >
+              <td>{{i+1}}</td>
+              <td>{{item.teamName}} [{{item.teamCode}}]</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container">
+  <div class="row m0">
+    <h3 style="text-align: center;">MATCHING LIST </h3>
+    <div class="sidebar" style="margin-top: 76px;">
+      <h5 style="text-align: center;">TEAMS LIST </h5>
+      <span *ngFor="let item of teamLists">
+        <a (click)="viewTeamMembers(item)">{{item.teamName}}</a>
+      </span>
+    </div>
+    <div class="content">
+    </div>
+  </div>
+</div>
